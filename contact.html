@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="contact.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+
+
+</html>
+
+<body>
+    
+    <header class="header">
+        <nav class="navbar">
+            <a href="#" class="nav-logo">SCS</a>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#services" class="nav-link">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Why Us?</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+</header>
+
+    <div class="container">
+        <div class="title">Get in touch!</div>
+        <div class="content">
+            <form action="#">
+                <div class="user-details">
+                    <div class="input-box">
+                        <span class="details">Full Name</span>
+                        <input type="text" placeholder="Enter your name" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Email</span>
+                        <input type="email" placeholder="Enter your email" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Phone Number</span>
+                        <input type="tel" placeholder="Enter your number" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Locality</span>
+                        <input type="text" placeholder="Enter Your Locality" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Organization Name (if any)</span>
+                        <input type="text" placeholder="Enter your Organization Name.">
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Mention Your Requirements</span>
+                        <!-- <input type="text" placeholder="Enter you Requirements" required> -->
+                        <textarea class="req" name="Requirements" rows="5" cols="29"
+                        required></textarea>
+                    </div>
+
+
+                </div>
+                <div class="button">
+                    <input type="submit" value="Submit">
+                </div>
+            </form>
+        </div>
+    </div>
+    <script>
+        const hamburger = document.querySelector(".hamburger");
+    const navMenu = document.querySelector(".nav-menu");
+    
+    hamburger.addEventListener("click", mobileMenu);
+    
+    function mobileMenu() {
+    hamburger.classList.toggle("active");
+    navMenu.classList.toggle("active");
+    }
+    const navLink = document.querySelectorAll(".nav-link");
+    
+    navLink.forEach(n => n.addEventListener("click", closeMenu));
+    
+    function closeMenu() {
+    hamburger.classList.remove("active");
+    navMenu.classList.remove("active");
+    }
+    </script>
+    
+</body>
+
+</html>

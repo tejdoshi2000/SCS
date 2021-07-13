@@ -1,0 +1,432 @@
+/* Flipping cards */
+div > .card:hover .card__inner {
+    transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+    
+}
+div > .card:hover .card__content--back{
+    background: rgb(80, 196, 231);
+}
+div > .card__content {
+    position: absolute;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+div > .card__content--back  {
+  transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+  
+
+}
+.card {
+    cursor: pointer;
+    margin: auto;
+    border-radius: 1rem;
+    perspective: 1000px;
+    padding: auto;
+    margin: 3rem auto;
+}    
+#bookkeeping{
+    background-image: url("bookkeeping.jpg");
+    background-position: center;
+    background-size: cover;
+    height: 20rem;
+    width: 35rem;
+    transition: transform 0.5s;
+    -webkit-transition: transform 0.5s;
+    transform-style: preserve-3d;
+}
+#fte{
+    background-image: url("fte.jpg");
+    background-position: center;
+    background-size: cover;
+    height: 20rem;
+    width: 35rem;
+    transition: transform 0.5s;
+    -webkit-transition: transform 0.5s;
+    transform-style: preserve-3d;
+  
+}
+#digital{
+    background-image: url("digital.jpg");
+    background-position: center;
+    background-size: cover;
+    height: 20rem;
+    width: 35rem;
+    transition: transform 0.5s;
+    -webkit-transition: transform 0.5s;
+    transform-style: preserve-3d;
+  
+}
+#database{
+    background-image: url("database.jpg");
+    background-position: center;
+    background-size: cover;
+    height: 20rem;
+    width: 35rem;
+    transition: transform 0.5s;
+    -webkit-transition: transform 0.5s;
+    transform-style: preserve-3d;
+  
+}
+#report{
+    background-image: url("report.jpg");
+    background-position: center;
+    background-size: cover;
+    height: 20rem;
+    width: 35rem;
+    transition: transform 0.5s;
+    -webkit-transition: transform 0.5s;
+    transform-style: preserve-3d;  
+}
+
+#analysis{
+    background-image: url("analysis.jpg");
+    background-position: center;
+    background-size: cover;
+    height: 20rem;
+    width: 35rem;
+    transition: transform 0.5s;
+    -webkit-transition: transform 0.5s;
+    transform-style: preserve-3d 
+}
+div > .card:hover  {
+    border-radius: 2rem;
+    border: 2px solid rgb(142, 142, 243);
+}
+div > .card:hover .card__content{
+    border-radius: 2rem;
+}
+div >.card:hover .card__inner{
+    border-radius: 2rem;
+}
+
+
+
+/* .card:hover{
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    
+} */
+
+.cardhead{
+    font-size: 2rem;
+    display: inline;
+    background-color: rgb(50, 157, 219);
+    color: black ;
+    border-radius: 0.7rem;
+    
+}
+.description{
+    text-align: center;
+    font-size: 2rem;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1.7rem;
+    color: #010f18;
+    font-family: 'Lato', sans-serif;
+}
+.services{
+    background: #e0e7eb;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;1,400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    margin-top: 0;
+}
+html{
+    font-size: 62.5%;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+.header{
+
+    background-color: #4267b2;
+    height: 5rem;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+}
+.hamburger {
+    display: none;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: white;
+}
+.nav-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav-item {
+    margin-left: 5rem;
+}
+
+.nav-link{
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: white;
+    padding: 1.9rem 1rem;
+}
+
+.nav-link:hover{
+    color: #482ff7;
+}
+
+.nav-logo {
+    font-size: 2.1rem;
+    font-weight: 500;
+    color: white;
+}
+.nav-item :hover{
+    background-color: white;
+
+}
+.nav-item:hover .nav-link{
+    color: #4267b2;
+}
+.heading{
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    display: block;
+        margin: 0;
+        line-height: 1em;
+        font-family: Helvetica, Arial, sans-serif;
+        font-weight: bold;
+        font-size: 8rem;
+        background: linear-gradient(to right, #1c87c9 50%, #8ebf42 20%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        padding: 0.5rem;
+        letter-spacing: 1px;
+}
+@media only screen and (max-width: 768px) {
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 4.9rem;
+        flex-direction: column;
+        background-color:#4267b2;
+        width: 100%;
+        /* border-radius: 10px; */
+        text-align: center;
+        transition: 0.3s;
+        box-shadow:
+            0 10px 27px rgba(0, 0, 0, 0.05);
+            margin-top: 0;
+            border-top: 2px solid white;
+    }
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .nav-item {
+        margin: 2.5rem 0;
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+        margin-top: 0;
+    }
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    /* Service cards */
+    .services{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+    .card__inner{
+        width: 70%;
+        height: 10%;
+    }
+    /* Heading */
+    .heading{
+        font-size: 1rem;
+        display: block;
+            margin: 0;
+            line-height: 1em;
+            font-family: 'Oswald', sans-serif;
+            font-weight: bold;
+            font-size: 4rem;
+            background: linear-gradient(to right, #1c87c9 49%, #8ebf42 50%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 1.5rem;
+    }
+    .main1{
+        text-align: center;
+        font-size: 2rem;
+    }
+        .nav-lin h1{
+        align-items: center;
+        justify-content: center;
+    }
+    /*  ABout US */
+    
+}
+/* Intro */
+.intro{
+    background-image: url("intro.jpg");
+    height: 60vh;
+    margin-top: 0;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    justify-content: center;
+    align-items: center;
+}
+.intro main h1{
+    justify-content: center;
+    align-items: center;
+
+}
+/* Services */
+.strip{
+
+    height: auto;
+    background-color: rgb(241, 241, 237);
+    justify-content: center;
+    align-items: center;
+}
+.main1{
+    text-align: center;
+    font-size: 3rem;
+    color: gray;
+    padding: 2rem;
+
+}
+.services
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+/* ABOUT US SECTION */
+.whyus{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: rgb(171, 226, 226);
+    
+}
+.about{
+    width: 50%;
+    height: 33rem;
+    font-size: 1.5rem;
+    
+}
+.seperate{
+    width: 50%;
+    height: 25rem;
+    font-size: 1.5rem;
+    
+}
+.seperate div{
+    padding: 1.5rem;
+}
+.seperate h1{
+    text-align: center;
+    text-decoration:underline;
+   
+    
+}
+.about p{
+    padding: 1.5rem;
+}
+.about h1{
+    text-align: center;
+    text-decoration: underline;
+
+}
+.qualities{
+    background-color:rgb(171, 226, 226) ;
+    
+}
+@media only screen and (max-width: 768px){
+    .whyus{
+        flex-direction: column;
+    }
+    
+    .about{
+        width: 100%;
+        padding: 1rem;
+    }
+    .about p{
+        padding: 1rem;
+    }
+    .seperate{
+        width: 100%;
+        padding: 1rem 0;
+        margin-top: 5rem;
+    }
+    .seperate div{
+        padding: 1rem;
+    }
+    
+}
+@media only screen and (max-width: 520px){
+    .about{
+        padding: 1.5rem;
+    }
+    .whyus div{
+        padding: 1.5rem 0;
+    }
+    .about div{
+        padding: 2rem;
+    }
+    .seperate div{
+        padding: 2rem;
+    }
+    .seperate{
+        padding: 1rem;
+        height: 30rem;
+    }
+    .seperate h1{
+        margin-top: 0.5rem;
+    }
+}
